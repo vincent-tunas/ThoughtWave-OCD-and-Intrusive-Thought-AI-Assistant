@@ -1,12 +1,9 @@
-<<<<<<< HEAD
+<img width="8092" height="123" alt="image" src="https://github.com/user-attachments/assets/2ea735cb-cd82-4485-9dfd-10950fa56e92" /><img width="3206" height="123" alt="image" src="https://github.com/user-attachments/assets/9e873f0f-f88e-4847-9f40-aa81406a7cd6" />
 # ThoughtWave MVP
 
-ThoughtWave is a Streamlit portfolio prototype that answers ordinary questions
-normally and changes its response policy when repeated certainty seeking becomes
-more likely across a conversation.
+ThoughtWave is a support AI tool for adults that experience distressing Intrusive thoughts and urges to seek repeated reassurance. 
 
-It detects an observable interaction pattern. It does not diagnose OCD, provide
-therapy, or replace emergency support.
+It is an AI application that is built as an adaptive, LLM-Integrated adaptive conversational support system. Its core engineering problem is to be able to recognize when a conversation is beginning to function as a reassurance loop and be able to change its response policy before the AI assistant starts to reinforce the repeated certainty seeking.
 
 ## How the two models work together
 
@@ -25,41 +22,6 @@ therapy, or replace emergency support.
 
 OpenRouter supplies the conversational answer. The embedding model never generates
 an answer, and the application has no canned answer fallback.
-
-## Setup
-
-Python 3.11 or 3.12 is recommended.
-
-### Windows PowerShell
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-Copy-Item .env.example .env
-```
-
-### macOS or Linux
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-cp .env.example .env
-```
-
-Edit `.env` and provide:
-
-```env
-HF_TOKEN=hf_your_token
-OPENROUTER_API_KEY=sk-or-v1-your_key
-OPENROUTER_MODEL=openai/gpt-4o-mini
-```
-
-The selected OpenRouter model must be available to your account. You may replace
-the example slug with another supported chat model.
 
 ## Run
 
