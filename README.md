@@ -1,4 +1,4 @@
 # ThoughtWave-OCD-and-Intrusive-Thought-AI-Assistant
 ThoughtWave is a support AI tool for adults that experience distressing Intrusive thoughts and urges to seek repeated reassurance. 
 
-![ThoughtWave architecture](images/architecture.png)
+![ThoughtWave architecture](images/ThoughtWave_Architecture_and_Workflow.png)
