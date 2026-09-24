@@ -1,4 +1,4 @@
-=======
+
 # ThoughtWave-OCD-and-Intrusive-Thought-AI-Assistant
 ThoughtWave is a support AI tool for adults that experience distressing Intrusive thoughts and urges to seek repeated reassurance. 
 
@@ -35,13 +35,12 @@ streamlit run app.py
 ```
 Edit `.env` before starting the app:
 ```dotenv
-OPENROUTER\_API\_KEY=your\_openrouter\_key
-OPENROUTER\_MODEL=openrouter/auto
-HF\_TOKEN=
-THOUGHTWAVE\_USE\_SEMANTIC=0
-THOUGHTWAVE\_EMBEDDING\_MODEL=sentence-transformers/all-MiniLM-L6-v2
+OPENROUTER_API_KEY=your_openrouter_key
+OPENROUTER_MODEL='select-your-model'
+HF_TOKEN=
+HF_EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 ```
-`OPENROUTER\_API\_KEY` is needed for normal chat replies. `HF\_TOKEN` for downloading the public embedding model. Keep `THOUGHTWAVE\_USE\_SEMANTIC=0` for the default lexical detector; enable semantic matching in the app's sidebar when needed. The first model download can take time. If semantic loading fails, the app falls back to lexical similarity. Restart Streamlit after changing `.env`.
+`OPENROUTER_API_KEY` is needed for normal chat replies. `HF_TOKEN` for downloading the public embedding model. The first model download can take time. If semantic loading fails, the app falls back to lexical similarity. Restart Streamlit after changing `.env`.
 Do not commit `.env` or API tokens. Without valid OpenRouter configuration, the app reports an error rather than presenting a canned response as an AI answer.
 Test
 >>>>>>> a19a04804a49b3db5c5e972ddaec0922df93bc4e
