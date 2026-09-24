@@ -40,7 +40,6 @@ OPENROUTER_MODEL='select-your-model'
 HF_TOKEN=
 HF_EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 ```
-`OPENROUTER_API_KEY` is needed for normal chat replies. `HF_TOKEN` for downloading the public embedding model. The first model download can take time. If semantic loading fails, the app falls back to lexical similarity. Restart Streamlit after changing `.env`.
-Do not commit `.env` or API tokens. Without valid OpenRouter configuration, the app reports an error rather than presenting a canned response as an AI answer.
-Test
->>>>>>> a19a04804a49b3db5c5e972ddaec0922df93bc4e
+`OPENROUTER_API_KEY` is needed for normal chat replies. `HF_TOKEN` for downloading the public embedding model. The first model download can take time. 
+Restart Streamlit after changing `.env`.
+Do not commit `.env` or API tokens. 
