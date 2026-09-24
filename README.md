@@ -6,6 +6,13 @@ This solution comes in a form of an AI application that is built as an adaptive,
 
 ![ThoughtWave architecture](images/ThoughtWave_Architecture_and_Workflow.png)
 
+The AI System uses two AI model:
+- gpt4.0-mini to answer user questions. The ai system uses a system prompt for the llm that can adapt its response based on the behavior state detected by the user, whether an OCD/intrusivethought/ reassurance seeking pattern is detected.
+- The chat message history are stored in SQLite DB for the pattern detection
+- The huggingface model sentence transformer all-MiniLM-L6-v2 is used to convert the saved message history into vector embeddings stored in memory Vector DB.
+- Using cosing similarity between the vector embeddings of the chat history enables the AI system to detect the user's behavior state.
+
+
 # Run locally
 Use Python 3.10 or newer. From the project directory:
 ```bash
@@ -34,7 +41,7 @@ HF\_TOKEN=
 THOUGHTWAVE\_USE\_SEMANTIC=0
 THOUGHTWAVE\_EMBEDDING\_MODEL=sentence-transformers/all-MiniLM-L6-v2
 ```
-`OPENROUTER\_API\_KEY` is needed for normal chat replies. `HF\_TOKEN` is optional for downloading the public embedding model. Keep `THOUGHTWAVE\_USE\_SEMANTIC=0` for the default lexical detector; enable semantic matching in the app's sidebar when needed. The first model download can take time. If semantic loading fails, the app falls back to lexical similarity. Restart Streamlit after changing `.env`.
+`OPENROUTER\_API\_KEY` is needed for normal chat replies. `HF\_TOKEN` for downloading the public embedding model. Keep `THOUGHTWAVE\_USE\_SEMANTIC=0` for the default lexical detector; enable semantic matching in the app's sidebar when needed. The first model download can take time. If semantic loading fails, the app falls back to lexical similarity. Restart Streamlit after changing `.env`.
 Do not commit `.env` or API tokens. Without valid OpenRouter configuration, the app reports an error rather than presenting a canned response as an AI answer.
 Test
 >>>>>>> a19a04804a49b3db5c5e972ddaec0922df93bc4e
